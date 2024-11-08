@@ -8,3 +8,7 @@ Simply run the scipt! There's nothing too it.
 
 # Credit
 Please add credit to my name when modifying this... also add the link to the original in there. Thanks!
+
+
+# Is this original?
+Yes this is 100% original made by me. I got this idea after watching a tutorial.
