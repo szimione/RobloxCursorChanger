@@ -1,6 +1,7 @@
 import os
 import colorama
 import time
+import sys
 from colorama import Back,Fore,Style
 colorama.init(autoreset=True)
 
@@ -34,10 +35,11 @@ def main():
     print(fr'{Fore.RED} |_|_\___/_.__/_\___/_\_\ \__|\_,_|_| /__/\___/_|   \__|_||_\__,_|_||_\__, \___|_|  ')
     time.sleep(0.1)
     print(fr'{Fore.RED}                                                                      |___/         ')
+    with open("version.txt", "r") as f:
+        print(f'{Fore.LIGHTYELLOW_EX}{'    '*15}{f.read()}')
 
 
     do_remove_files = input('Remove empty version folders? (Y/N): ').lower()
-    completed = False
     os.chdir(os.path.expandvars(r'%localappdata%\Roblox\Versions'))
     folders = [name for name in os.listdir() if os.path.isdir(os.path.join(os.getcwd(), name))]
     print(f'{Fore.CYAN}Found {len(folders)} folders')
@@ -45,7 +47,7 @@ def main():
         print(f'{Fore.CYAN}Checking for roblox files in {folder}')
         os.chdir(os.path.expandvars(folder))
         things_in_path = os.listdir()
-        if 'content' in things_in_path and completed == False:
+        if 'content' in things_in_path:
             if 'StudioFonts' in os.listdir():
                 os.chdir(os.path.expandvars(r'..'))
                 print(f'{Fore.RED}  Ignoring Roblox Studio in {folder}...')
@@ -55,7 +57,8 @@ def main():
                 os.system(r"xcopy ArrowCursor.png Cursors\KeyboardMouse\\ /Y >nul")
                 os.system(r"xcopy ArrowFarCursor.png Cursors\KeyboardMouse\\ /Y >nul")
                 print(f'{Fore.GREEN}    Successfully replaced cursor texture!')
-                completed = True
+                os.system('pause')
+                sys.exit()
         else:
             os.chdir(os.path.expandvars(r'..'))
             print(f'{Fore.RED}  No roblox files found in {folder}')
