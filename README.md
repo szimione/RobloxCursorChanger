@@ -20,6 +20,9 @@ Run it using the Command Line (CMD). Later replace --help with your own argument
 RobloxCursorChanger_CommandApplication.py --help
 ```
 
+# WARNING!
+Roblox only takes 32 x 32 pxls png. If you try any other format the cursor will become invisible.
+
 # Credit
 
 Please add credit to my name when modifying this... also add the link to the original in there. Thanks!
