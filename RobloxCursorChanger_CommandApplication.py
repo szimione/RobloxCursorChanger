@@ -72,4 +72,3 @@ for folder in folders:
             print(f'{Fore.BLUE}     Removing empty version folder {folder}')
             os.system('rmdir /s/q ' + folder)
     time.sleep(0.5)
-            
