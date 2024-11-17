@@ -60,8 +60,8 @@ for folder in folders:
         else:
             print(f'{Fore.GREEN}Found roblox files in {os.getcwd()}')
             os.chdir(os.path.expandvars(r'content\textures'))
-            os.system(f"xcopy ArrowCursor.png Cursors\\KeyboardMouse\\ /Y >nul")
-            os.system(f"xcopy ArrowFarCursor.png Cursors\\KeyboardMouse\\ /Y >nul")
+            os.system(f"xcopy {args.fileone} Cursors\\KeyboardMouse\\ /Y >nul")
+            os.system(f"xcopy {args.filetwo} Cursors\\KeyboardMouse\\ /Y >nul")
             print(f'{Fore.GREEN}    Successfully replaced cursor texture!')
             os.system('pause')
             sys.exit()
