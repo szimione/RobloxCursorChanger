@@ -21,4 +21,4 @@ Please add credit to my name when modifying this... also add the link to the ori
 
 
 # Is this original?
-Yes this SCIPT is 100% original made by me.
+Yes this SCRIPT is 100% original made by me.
