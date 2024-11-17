@@ -16,7 +16,7 @@ with open("version.txt", "r") as f:
 parser = argparse.ArgumentParser()
 parser.add_argument('--fileone', '-f1', help='Specify first cursor file', default='ArrowCursor.png')
 parser.add_argument('--filetwo', '-f2', help='Specify second cursor file', default='ArrowFarCursor.png')
-parser.add_argument('--remove', '-r', help='Remove empty version folders', default='n')
+parser.add_argument('--remove', '-r', help='Remove empty version folders', default='n', action='store_true')
 parser.add_argument('--version', '-v', help='Show version', action='version', version=version)
 args = parser.parse_args()
 print(fr'{Fore.LIGHTCYAN_EX} ________  ________  ___  _____ ______   ___  ________  ________   _______      ')
@@ -68,7 +68,7 @@ for folder in folders:
     else:
         os.chdir(os.path.expandvars(r'..'))
         print(f'{Fore.RED}  No roblox files found in {folder}')
-        if args.remove == 'y':
+        if args.remove:
             print(f'{Fore.BLUE}     Removing empty version folder {folder}')
             os.system('rmdir /s/q ' + folder)
     time.sleep(0.5)
