@@ -11,6 +11,12 @@ if os.name != 'nt':
     time.sleep(10)
     sys.exit()
 
+def resolve_file_path(file_path):
+    if not os.path.isabs(file_path):
+        file_path = os.path.join(os.getcwd(), file_path)
+    file_path = os.path.abspath(file_path)
+    return file_path
+
 with open("version.txt", "r") as f:
     version = f.read()
 parser = argparse.ArgumentParser()
@@ -46,6 +52,8 @@ time.sleep(0.1)
 print(fr'{Fore.RED}                                                                      |___/         ')
 time.sleep(0.1)
 print(f'{Fore.LIGHTYELLOW_EX}You are using a Command Line Application of this script. For help run the script with --help or -h.\n  This scipt is more cutomizable. If you wish to run the normal one sipmly run \'RobloxCursorChanger.py\'')
+fileone = resolve_file_path(args.fileone)
+filetwo = resolve_file_path(args.filetwo)
 os.chdir(os.path.expandvars(r'%localappdata%\Roblox\Versions'))
 folders = [name for name in os.listdir() if os.path.isdir(os.path.join(os.getcwd(), name))]
 print(f'{Fore.CYAN}Found {len(folders)} folders')
@@ -60,8 +68,8 @@ for folder in folders:
         else:
             print(f'{Fore.GREEN}Found roblox files in {os.getcwd()}')
             os.chdir(os.path.expandvars(r'content\textures'))
-            os.system(f"xcopy {args.fileone} Cursors\\KeyboardMouse\\ArrowCursor.png /Y >nul")
-            os.system(f"xcopy {args.filetwo} Cursors\\KeyboardMouse\\ArrowFarCursor.png /Y >nul")
+            os.system(f"xcopy {fileone} Cursors\\KeyboardMouse\\ArrowCursor.png /Y >nul")
+            os.system(f"xcopy {filetwo} Cursors\\KeyboardMouse\\ArrowFarCursor.png /Y >nul")
             print(f'{Fore.GREEN}    Successfully replaced cursor texture!')
             os.system('pause')
             sys.exit()
