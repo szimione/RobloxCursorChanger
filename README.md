@@ -37,7 +37,7 @@ py RobloxCursorChanger_CommandApplication.py -f1 DRAG_FILE_HERE_OR_PASTE_PATH -f
 ```
 
 # WARNING!
-Roblox only takes 32 x 32 pxls png. If you try any other format the cursor will become invisible.
+Roblox only takes aything under 64 x 64 pxls png. If you try any other format the cursor will become invisible.
 # Credit
 Please add credit to my name when modifying this... also add the link to the original in there. Thanks!
 
