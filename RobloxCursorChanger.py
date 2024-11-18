@@ -12,11 +12,11 @@ def main():
         return
     print(fr'{Fore.LIGHTCYAN_EX} ________  ________  ___  _____ ______   ___  ________  ________   _______      ')
     time.sleep(0.1)
-    print(fr'{Fore.CYAN}|\   ____\|\_____  \|\  \|\   _ \  _   \|\  \|\   __  \|\   ___  \|\  ___ \     ')
+    print(fr'{Fore.LIGHTCYAN_EX}|\   ____\|\_____  \|\  \|\   _ \  _   \|\  \|\   __  \|\   ___  \|\  ___ \     ')
     time.sleep(0.1)
     print(fr'{Fore.CYAN}\ \  \___|_\|___/  /\ \  \ \  \\\__\ \  \ \  \ \  \|\  \ \  \\ \  \ \   __/|    ')
     time.sleep(0.1)
-    print(fr'{Fore.LIGHTCYAN_EX} \ \_____  \   /  / /\ \  \ \  \\|__| \  \ \  \ \  \\\  \ \  \\ \  \ \  \_|/__  ')
+    print(fr'{Fore.CYAN} \ \_____  \   /  / /\ \  \ \  \\|__| \  \ \  \ \  \\\  \ \  \\ \  \ \  \_|/__  ')
     time.sleep(0.1)
     print(fr'{Fore.LIGHTBLUE_EX}  \|____|\  \ /  /_/__\ \  \ \  \    \ \  \ \  \ \  \\\  \ \  \\ \  \ \  \_|\ \ ')
     time.sleep(0.1)
